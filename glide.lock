@@ -1,0 +1,10 @@
+hash: 230439a2a8cc68f05e08dbd8490e6efdf85052fa9c3a554913a5cd16ce105c5b
+updated: 2017-11-11T14:34:41.857578+09:00
+imports:
+- name: github.com/gin-gonic/gin
+  version: d459835d2b077e44f7c9b453505ee29881d5d12d
+- name: gopkg.in/gographics/imagick.v3
+  version: b231e622f10dba6f961e73e1b3ce0b55cc39f831
+  subpackages:
+  - imagick
+testImports: []
