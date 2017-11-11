@@ -1,5 +1,5 @@
-hash: f8cdea8e299f9e15325a6ac548ac7ffbe74090356f53107eb108317276ff53fb
-updated: 2017-11-11T17:29:43.647676+09:00
+hash: 829bf3ed902d98909fd69e8d43fb5c5c321b6dad2b0e0b2cf5049eaabe7f07cb
+updated: 2017-11-11T20:39:03.622327+09:00
 imports:
 - name: github.com/gin-contrib/sse
   version: 22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae
@@ -32,10 +32,15 @@ imports:
   version: ac9de6ea28e6084fd5ba495d3692c266315c0ebc
   subpackages:
   - codec
+- name: golang.org/x/crypto
+  version: 6a293f2d4b14b8e6d3f0539e383f6d0d30fce3fd
+  subpackages:
+  - ssh/terminal
 - name: golang.org/x/sys
   version: 1e2299c37cc91a509f1b12369872d27be0ce98a6
   subpackages:
   - unix
+  - windows
 - name: gopkg.in/go-playground/validator.v8
   version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
 - name: gopkg.in/gographics/imagick.v3
