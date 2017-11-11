@@ -1,13 +1,25 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
+	"github.com/Sirupsen/logrus"
+	"os"
+)
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		logrus.Error("Warning: .env file not loading. " + err.Error())
+	}
 	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run() // listen and serve on 0.0.0.0:8080
+	r.Run(":" + listenPort())
+}
+
+func listenPort() string {
+	port := os.Getenv("PORT")
+	if port == "" {
+		return "8000"
+	}
+	return port
 }
