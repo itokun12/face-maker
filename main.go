@@ -5,6 +5,7 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/Sirupsen/logrus"
 	"os"
+	"github.com/itokun12/image-maker/models"
 )
 
 func main() {
@@ -13,6 +14,7 @@ func main() {
 		logrus.Error("Warning: .env file not loading. " + err.Error())
 	}
 	r := gin.Default()
+	models.Initialize()
 	r.Run(":" + listenPort())
 }
 
