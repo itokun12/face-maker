@@ -38,7 +38,7 @@ func databaseConfigFromEnv(schemaName string) *databaseConfig {
 	user := utils.Env(prefix+"_USERNAME", utils.Env("DATABASE_USERNAME", "root"))
 	password := utils.Env(prefix+"_PASSWORD", utils.Env("DATABASE_PASSWORD", "root"))
 	host := utils.Env(prefix+"_HOST", utils.Env("DATABASE_HOST", "127.0.0.1"))
-	port := utils.Env(prefix+"_PORT", utils.Env("DATABASE_SCHEMA", "3306"))
+	port := utils.Env(prefix+"_PORT", utils.Env("DATABASE_PORT", "3306"))
 	schema := utils.Env(prefix+"_SCHEMA", schemaName)
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True", user, password, host, port, schema)
 
