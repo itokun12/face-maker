@@ -1,5 +1,5 @@
-hash: f3300fd7694b9c9021d2c3630fab152a80a41d76bf1329d682e9b74e7ab472e3
-updated: 2017-11-11T14:57:44.467844+09:00
+hash: 7bef9748cc92f71fda58bce3b201c087b81b430056c8c26f5e3223f10fa31a50
+updated: 2017-11-11T15:06:17.525885+09:00
 imports:
 - name: github.com/gin-contrib/sse
   version: 22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae
@@ -20,6 +20,8 @@ imports:
   version: a79fa1e548e2c689c241d10173efd51e5d689d5b
 - name: github.com/mattn/go-isatty
   version: 6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c
+- name: github.com/pkg/errors
+  version: 645ef00459ed84a119197bfb8d8205042c6df63d
 - name: github.com/ugorji/go
   version: ac9de6ea28e6084fd5ba495d3692c266315c0ebc
   subpackages:
