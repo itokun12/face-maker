@@ -2,7 +2,7 @@ package orm
 
 import (
 	"fmt"
-	"github.com/itokun12/image-maker/utils"
+	"github.com/itokun12/face-maker/utils"
 	"strings"
 	"time"
 )

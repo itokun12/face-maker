@@ -1,4 +1,4 @@
-package: github.com/itokun12/image-maker
+package: github.com/itokun12/face-maker
 import:
 - package: github.com/gin-gonic/gin
   version: ^1.2.0

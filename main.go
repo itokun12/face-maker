@@ -5,7 +5,7 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/Sirupsen/logrus"
 	"os"
-	"github.com/itokun12/image-maker/models"
+	"github.com/itokun12/face-maker/models"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-# image-maker
+# face-maker
 
 ## Require
 - glide

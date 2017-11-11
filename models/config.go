@@ -3,9 +3,9 @@ package models
 import (
 	"fmt"
 	"github.com/Sirupsen/logrus"
-	"github.com/itokun12/image-maker/orm"
+	"github.com/itokun12/face-maker/orm"
 	"github.com/pkg/errors"
-	"github.com/itokun12/image-maker/utils"
+	"github.com/itokun12/face-maker/utils"
 )
 
 var (
@@ -21,7 +21,7 @@ const (
 )
 
 func Initialize() {
-	masterDB = connectToDB(MySQL, utils.Env("DATABASE_SCHEMA", "image-maker"))
+	masterDB = connectToDB(MySQL, utils.Env("DATABASE_SCHEMA", "face_maker"))
 }
 
 func Finalize() {
