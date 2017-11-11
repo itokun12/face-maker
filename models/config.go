@@ -5,6 +5,7 @@ import (
 	"github.com/Sirupsen/logrus"
 	"github.com/itokun12/image-maker/orm"
 	"github.com/pkg/errors"
+	"github.com/itokun12/image-maker/utils"
 )
 
 var (
@@ -20,7 +21,7 @@ const (
 )
 
 func Initialize() {
-	masterDB = connectToDB(MySQL, "image-maker")
+	masterDB = connectToDB(MySQL, utils.Env("DATABASE_SCHEMA", "image-maker"))
 }
 
 func Finalize() {
