@@ -1,10 +1,39 @@
-hash: 230439a2a8cc68f05e08dbd8490e6efdf85052fa9c3a554913a5cd16ce105c5b
-updated: 2017-11-11T14:34:41.857578+09:00
+hash: f3300fd7694b9c9021d2c3630fab152a80a41d76bf1329d682e9b74e7ab472e3
+updated: 2017-11-11T14:57:44.467844+09:00
 imports:
+- name: github.com/gin-contrib/sse
+  version: 22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae
 - name: github.com/gin-gonic/gin
   version: d459835d2b077e44f7c9b453505ee29881d5d12d
+  subpackages:
+  - binding
+  - render
+- name: github.com/go-sql-driver/mysql
+  version: a0583e0143b1624142adab07e0e97fe106d99561
+- name: github.com/golang/protobuf
+  version: 1643683e1b54a9e88ad26d98f81400c8c9d9f4f9
+  subpackages:
+  - proto
+- name: github.com/jinzhu/gorm
+  version: 5174cc5c242a728b435ea2be8a2f7f998e15429b
+- name: github.com/joho/godotenv
+  version: a79fa1e548e2c689c241d10173efd51e5d689d5b
+- name: github.com/mattn/go-isatty
+  version: 6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c
+- name: github.com/ugorji/go
+  version: ac9de6ea28e6084fd5ba495d3692c266315c0ebc
+  subpackages:
+  - codec
+- name: golang.org/x/sys
+  version: 1e2299c37cc91a509f1b12369872d27be0ce98a6
+  subpackages:
+  - unix
+- name: gopkg.in/go-playground/validator.v8
+  version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
 - name: gopkg.in/gographics/imagick.v3
   version: b231e622f10dba6f961e73e1b3ce0b55cc39f831
   subpackages:
   - imagick
+- name: gopkg.in/yaml.v2
+  version: eb3733d160e74a9c7e442f435eb3bea458e1d19f
 testImports: []

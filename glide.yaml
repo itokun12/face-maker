@@ -6,3 +6,9 @@ import:
   version: ^3.1.1
   subpackages:
   - imagick
+- package: github.com/go-sql-driver/mysql
+  version: ^1.3.0
+- package: github.com/joho/godotenv
+  version: ^1.2.0
+- package: github.com/jinzhu/gorm
+  version: ^1.0.0
