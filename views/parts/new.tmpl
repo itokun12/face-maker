@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Face-Maker</title>
+
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap Material Design generic -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.min.css">
+
+</head>
+
+<body>
+<div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay-md-down bmd-drawer-in-lg-up">
+
+  <header class="bmd-layout-header">
+    <div class="navbar navbar-light bg-faded">
+      <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="drawer" data-target="#dw-1">
+        <span class="sr-only">Toggle drawer</span>
+        <i class="material-icons">menu</i>
+      </button>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">Face-Maker</li>
+      </ul>
+      <ul class="nav navbar-nav pull-xs-right">
+        <li class="nav-item">
+          <div class="bmd-form-group bmd-collapse-inline pull-xs-right">
+            <a class="btn bmd-btn-icon" href="https://github.com/itokun12/face-maker">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div id="dw-1" class="bmd-layout-drawer bg-faded">
+    <header>
+      <a class="navbar-brand">Face-Maker</a>
+    </header>
+    <ul class="list-group">
+      <a class="list-group-item btn" href="/parts">
+        <i class="material-icons" role="presentation">inbox</i>Inbox
+      </a>
+      <a class="list-group-item btn" href="/parts/new">
+        <i class="material-icons" role="presentation">input</i>Input
+      </a>
+
+      <li class="bmd-layout-spacer"></li>
+
+    </ul>
+  </div>
+
+  <!-- Contents -->
+
+  <div class="bmd-layout-content" style="margin-top: 120px; margin-left: 330px">
+
+    <form action="/parts" method="post" enctype="multipart/form-data" class="form-inline">
+
+    <fieldset class="form-group">
+      <legend>Choose file and Select which parts type and Submit</legend>
+
+      <div class="form-group">
+        <label class="custom-file">
+          <input type="file" id="file" class="custom-file-input" name="file">
+          <span class="custom-file-control"></span>
+        </label>
+      </div>
+
+      <div class="custom-controls-stacked form-group" style="margin-top: 30px; margin-left: 80px;">
+        <label class="custom-control custom-radio">
+          <input name="parts-type" type="radio" class="custom-control-input" value="eye">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">eye</span>
+        </label>
+        <label class="custom-control custom-radio">
+          <input name="parts-type" type="radio" class="custom-control-input" value="eyebrow">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">eyebrow</span>
+        </label>
+        <label class="custom-control custom-radio">
+          <input name="parts-type" type="radio" class="custom-control-input" value="nose">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">nose</span>
+        </label>
+        <label class="custom-control custom-radio">
+          <input name="parts-type" type="radio" class="custom-control-input" value="mouth">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">mouth</span>
+        </label>
+        <label class="custom-control custom-radio">
+          <input name="parts-type" type="radio" class="custom-control-input" value="eyebrow">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">eyebrow</span>
+        </label>
+      </div>
+    </fieldset>
+
+      <div class="form-group" style="margin-top: 30px; margin-left: 35px;">
+        <label class="custom-control custom-radio">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </label>
+      </div>
+    </form>
+
+  </div>
+
+  <!-- Contents End -->
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://cdn.rawgit.com/HubSpot/tether/v1.3.4/dist/js/tether.min.js"></script>
+<script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
+<script src="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.iife.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+<script>
+  $(function () {
+    $('body').bootstrapMaterialDesign();
+  })
+</script>
+
+</body>
+
+</html>
