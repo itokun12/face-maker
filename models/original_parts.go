@@ -1,11 +1,9 @@
 package models
 
-import "github.com/jinzhu/gorm"
-
 type OriginalParts struct {
-	gorm.Model
+	Model
 	PartsTypeID int
-	FileName    string
+	Filename    string
 }
 
 const (
