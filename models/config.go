@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"github.com/Sirupsen/logrus"
 	"github.com/itokun12/face-maker/orm"
-	"github.com/pkg/errors"
 	"github.com/itokun12/face-maker/utils"
+	"github.com/pkg/errors"
 )
 
 var (
