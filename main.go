@@ -4,11 +4,12 @@ import (
 	"github.com/Sirupsen/logrus"
 	"github.com/gin-gonic/gin"
 	"github.com/itokun12/face-maker/models"
+	"github.com/itokun12/face-maker/utils"
 	"github.com/joho/godotenv"
+	"log"
 	"net/http"
 	"os"
-	"log"
-	"io"
+	"strconv"
 )
 
 func main() {
@@ -34,16 +35,15 @@ func main() {
 	})
 	r.POST("/parts", func(c *gin.Context) {
 		file, header, err := c.Request.FormFile("file")
+		partsTypeID, err := strconv.Atoi(c.PostForm("parts-type"))
+		if err != nil {
+			log.Fatal(err)
+		}
 		filename := header.Filename
-		out, err := os.Create("./images/"+filename)
-		if err != nil {
-			log.Fatal(err)
-		}
-		defer out.Close()
-		_, err = io.Copy(out, file)
-		if err != nil {
-			log.Fatal(err)
-		}
+		utils.SaveFile(file, filename)
+		models.PartsRepository.RegisterPart(filename, partsTypeID)
+
+		c.Redirect(http.StatusMovedPermanently, "/parts")
 	})
 	r.Run(":" + listenPort())
 }

@@ -34,15 +34,15 @@ func connectToDB(typ ConnectionType, schemaName string) *orm.DB {
 	if typ == MySQL {
 		db, err = orm.NewDBFromEnvValue(schemaName)
 	} else {
-		e := fmt.Errorf("Unknown connection type %v", typ)
-		logger.Errorln(e)
-		panic(e)
+		err := fmt.Errorf("Unknown connection type %v", typ)
+		logger.Errorln(err)
+		panic(err)
 	}
 
 	if err != nil {
-		e := errors.Wrapf(err, "Connect to database failed (schemaName:%v)", schemaName)
-		logger.Errorln(e)
-		panic(e)
+		err := errors.Wrapf(err, "Connect to database failed (schemaName:%v)", schemaName)
+		logger.Errorln(err)
+		panic(err)
 	}
 	return db
 }
