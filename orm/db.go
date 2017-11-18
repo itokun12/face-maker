@@ -83,6 +83,11 @@ func (s *DB) Rows() (*sql.Rows, error) {
 	return s.impl.Rows()
 }
 
+// Wrapped gorm.DB.Find
+func (s *DB) Find(out interface{}, where ...interface{}) *DB {
+	return wrapDB(s.impl.Find(out, where...))
+}
+
 // ------- Internal use
 
 func wrapDB(db *gorm.DB) *DB {

@@ -5,7 +5,7 @@ var PartsRepository = partsRepository{}
 type partsRepository struct {
 }
 
-func (d *partsRepository) RegisterPart(fileName string, partsTypeID int) (*OriginalParts) {
+func (p *partsRepository) RegisterPart(fileName string, partsTypeID int) (*OriginalParts) {
 	part := OriginalParts{
 		Filename: fileName,
 		PartsTypeID: partsTypeID,
@@ -15,4 +15,14 @@ func (d *partsRepository) RegisterPart(fileName string, partsTypeID int) (*Origi
 		logger.Errorln(err)
 	}
 	return &part
+}
+
+func (p *partsRepository) FindAll() ([]OriginalParts) {
+	originalParts := []OriginalParts{}
+	err := masterDB.Find(&originalParts).Error()
+
+	if err != nil {
+		logger.Errorln(err)
+	}
+	return originalParts
 }
