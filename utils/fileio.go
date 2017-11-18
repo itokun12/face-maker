@@ -7,8 +7,8 @@ import (
 	"os"
 )
 
-func SaveFile(file multipart.File, filename string) {
-	out, err := os.Create("./images/" + filename)
+func SaveFile(file multipart.File, filename string, dir string) {
+	out, err := os.Create("./images/" + dir + "/" + filename)
 	if err != nil {
 		log.Fatal(err)
 	}

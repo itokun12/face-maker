@@ -40,9 +40,9 @@ func main() {
 			log.Fatal(err)
 		}
 		filename := header.Filename
-		utils.SaveFile(file, filename)
+		utils.SaveFile(file, filename, "original")
+		utils.Resize(filename)
 		models.PartsRepository.RegisterPart(filename, partsTypeID)
-
 		c.Redirect(http.StatusMovedPermanently, "/parts")
 	})
 	r.Run(":" + listenPort())
