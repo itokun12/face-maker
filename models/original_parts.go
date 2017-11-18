@@ -5,7 +5,7 @@ import "github.com/jinzhu/gorm"
 type OriginalParts struct {
 	gorm.Model
 	PartsTypeID int
-	FilePath    string
+	FileName    string
 }
 
 const (
